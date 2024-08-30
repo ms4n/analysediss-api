@@ -25,6 +25,8 @@ class ChatService:
 
         Always use the analyze_data_tool first if no data has been loaded. When formulating pandas queries, use clear and efficient code. If a user's request is unclear, ask for clarification. Provide concise explanations of your analysis and offer to elaborate if the user requests more details.
 
+        Always start by explicitly asking the user for the CSV file path if it hasn't been provided yet. This is crucial for initiating the data analysis process.
+
         When formulating pandas operations or queries, use one of these two formats:
 
         1. For simple queries: Provide a query string suitable for df.query(). Example: 'Sales > 1000 and Region == "North"'
