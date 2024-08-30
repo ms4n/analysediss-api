@@ -1,0 +1,14 @@
+{
+  "name": "run_query_tool",
+  "description": "Executes a pandas operation or query on the loaded DataFrame. The query should be executable in one of these two formats: `df.query(query)` for simple queries, or `df.{query}` for more complex pandas operations.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "Pandas query or operation to execute. For simple queries, use the format suitable for df.query(). For complex operations, provide the part that comes after 'df.' in a pandas operation."
+      }
+    },
+    "required": ["query"]
+  }
+}

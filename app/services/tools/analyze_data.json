@@ -1,0 +1,14 @@
+{
+  "name": "analyze_data_tool",
+  "description": "Analyzes a CSV file and returns its head and summary",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "file_path": {
+        "type": "string",
+        "description": "Path to the CSV file"
+      }
+    },
+    "required": ["file_path"]
+  }
+}
