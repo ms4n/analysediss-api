@@ -22,6 +22,15 @@ app.add_middleware(
 
 app.include_router(chat.router)
 
+
+@app.get("/healthcheck", status_code=200)
+async def healthcheck():
+    return {"status": "OK"}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
